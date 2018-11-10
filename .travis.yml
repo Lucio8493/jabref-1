@@ -40,6 +40,15 @@ before_install:
 
 install: true
 
+addons:
+  sonarcloud:
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    token:
+      secure: ********* # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
+
 before_script:
   - psql -c 'create database jabref;' -U postgres
   - mysql -u root -e 'create database jabref'
