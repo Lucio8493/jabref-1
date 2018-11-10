@@ -45,7 +45,7 @@ addons:
   sonarcloud:
     organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
     token:
-      secure: ********* # encrypted value of your token
+      secure: 8639a0199ce99e66b76b2c7c303cbe4888abe6c3 # encrypted value of your token
 script:
   # other script steps might be done before running the actual analysis
   - sonar-scanner
